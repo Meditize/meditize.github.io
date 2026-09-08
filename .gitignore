@@ -3,3 +3,12 @@ dist/
 .astro/
 .DS_Store
 npm-debug.log*
+
+# site source (deployed from a separate source repo; this repo holds only built files)
+src/
+public/
+package.json
+package-lock.json
+astro.config.mjs
+README.md
+.claude/
