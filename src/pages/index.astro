@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+
+const store =
+  'https://chromewebstore.google.com/detail/eye-exercises-strain-reli/jnmmnipcjejnofidackkaghkddddhaml';
+
+const pillars = [
+  {
+    icon: '👁',
+    title: 'Eye Strain Relief',
+    text: 'Guided eye exercises help reduce screen-related eye fatigue and visual tension during long work sessions.',
+  },
+  {
+    icon: '⏱',
+    title: 'Break Timer',
+    text: 'Use timed reminders to take regular eye breaks and avoid continuous screen overload throughout the day.',
+  },
+  {
+    icon: '🎧',
+    title: 'Calming Audio',
+    text: 'Optional ambient music makes each eye break more relaxing and helps you return to work with clearer focus.',
+  },
+];
+---
+
+<Base title="Meditize — Eye Care OS for long screen sessions">
+  <section class="hero wrap" slot="hero">
+    <h1>Eye Care OS</h1>
+    <p>
+      Make long screen sessions easier on your eyes with guided eye workouts, blue light comfort,
+      reading mode, smart breaks and calming audio.
+    </p>
+    <a class="btn" href={store} target="_blank" rel="noopener">Start Eye Care Now — it’s Free</a>
+  </section>
+
+  <section class="section wrap">
+    <p class="eyebrow center">Why Meditize</p>
+    <div class="grid grid--3">
+      {
+        pillars.map((p) => (
+          <article class="card">
+            <div class="card__icon">{p.icon}</div>
+            <h3>{p.title}</h3>
+            <p class="muted">{p.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="split">
+      <div>
+        <h2>Less Eye Fatigue, Day by Day</h2>
+        <p class="lead">
+          Meditize helps you build a repeatable eye-care routine during screen work: short guided
+          exercises, timed breaks, and calming audio that make daily relief easy to maintain.
+        </p>
+        <a class="btn" href={store} target="_blank" rel="noopener">Explore the Product</a>
+      </div>
+      <img
+        src="/img/product.png"
+        alt="Meditize extension interface"
+        width="1280"
+        height="800"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/DbdRMinQxfk"
+        title="Meditize — eye relief workouts"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="cta-band">
+      <h2>Reduce Digital Eye Strain While You Work</h2>
+      <p class="muted">One click to install. One click to relax.</p>
+      <a class="btn" href={store} target="_blank" rel="noopener">Try Meditize — it’s Free</a>
+    </div>
+  </section>
+</Base>

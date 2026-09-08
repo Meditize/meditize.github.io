@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+
+const checkout = 'https://meditizeapp.gumroad.com/l/wrulk';
+
+const included = [
+  '30-second guided eye exercises',
+  'Smart break timer and screen-off reminders',
+  'Calming audio for focused, gentle breaks',
+  'Blue light blocker and softer screen colors',
+  'Clean reading mode for long articles',
+];
+---
+
+<Base
+  title="Pricing — Meditize"
+  description="Eye Care OS Pro — a one-time $9 purchase for lifetime access to guided exercises, smart breaks and calming audio."
+>
+  <section class="page-hero wrap" slot="hero">
+    <h1>Eye Care OS Pro</h1>
+    <p>Exclusive offer — one payment, lifetime access.</p>
+  </section>
+
+  <section class="section wrap">
+    <div class="price-card">
+      <div class="amount">$9</div>
+      <p class="muted">one-time purchase</p>
+      <ul class="price-list">
+        {included.map((item) => <li>{item}</li>)}
+      </ul>
+      <a class="btn" href={checkout} target="_blank" rel="noopener">Get for $9 now</a>
+    </div>
+
+    <p class="narrow center muted" style="margin-top:36px">
+      Unlock your full productivity by taking care of your eyes. Our Eye Relief Workouts Pro program
+      offers guided exercises, smart break reminders, and calming audio to help you stay focused and
+      healthy. Invest just $9 once for lifetime access and start boosting your performance today.
+    </p>
+  </section>
+</Base>

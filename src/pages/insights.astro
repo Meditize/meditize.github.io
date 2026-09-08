@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { posts } from '../data/posts.js';
+---
+
+<Base
+  title="Insights — Meditize"
+  description="Research-driven perspectives on workplace wellbeing, productivity and sustainable performance in digital work."
+>
+  <section class="page-hero wrap" slot="hero">
+    <h1>Insights</h1>
+    <p>Where Meditize steps beyond tools — into ideas, trends and knowledge.</p>
+  </section>
+
+  <section class="section narrow">
+    <p class="lead">
+      In our Insights hub, we share research-driven perspectives, actionable strategies, and expert
+      guidance around modern workplace wellbeing. This is where Meditize steps beyond tools — into
+      ideas, trends, and knowledge that help you think differently about health, productivity, and
+      sustainable performance in digital work.
+    </p>
+    <p>
+      Explore topics like vision, posture, stress &amp; resilience, and discover content that
+      connects science with real-life work.
+    </p>
+
+    <h2>Start here</h2>
+    <ul class="post-list">
+      {
+        posts.map((post) => (
+          <li>
+            <a href={post.href}>
+              <article class="card">
+                <p class="post-date">{post.date}</p>
+                <h3>{post.title}</h3>
+                <p class="muted">{post.excerpt}</p>
+              </article>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>

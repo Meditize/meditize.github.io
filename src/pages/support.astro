@@ -1,0 +1,103 @@
+---
+import Base from '../layouts/Base.astro';
+
+const store =
+  'https://chromewebstore.google.com/detail/eye-exercises-strain-reli/jnmmnipcjejnofidackkaghkddddhaml';
+---
+
+<Base
+  title="Support — Meditize"
+  description="Install, remove, disable and troubleshoot the Meditize Chrome extension."
+>
+  <section class="page-hero wrap" slot="hero">
+    <h1>Support</h1>
+    <p>
+      Meditize helps reduce eye strain and build healthier screen habits with guided exercises and
+      reminders.
+    </p>
+  </section>
+
+  <section class="section narrow prose">
+    <p>
+      <strong>Chrome Web Store:</strong>
+      <a href={store} target="_blank" rel="noopener">Download Meditize Extension for Chrome</a>
+    </p>
+
+    <h2>How to install the extension</h2>
+    <ol>
+      <li>Open the <a href={store} target="_blank" rel="noopener">Chrome Web Store page</a>.</li>
+      <li>Click <strong>Add to Chrome</strong>.</li>
+      <li>Confirm by clicking <strong>Add extension</strong>.</li>
+      <li>
+        Optional — pin Meditize to your Chrome toolbar: click the puzzle icon (Extensions), find
+        Meditize, click the pin icon.
+      </li>
+      <li>Open the extension and allow notifications (recommended).</li>
+    </ol>
+
+    <h2>How to remove (uninstall) the extension</h2>
+    <p><strong>Option A — from the toolbar:</strong></p>
+    <ol>
+      <li>Right-click the Meditize icon in the Chrome toolbar.</li>
+      <li>Click <strong>Remove from Chrome</strong>.</li>
+      <li>Confirm removal.</li>
+    </ol>
+    <p><strong>Option B — from the Extensions page:</strong></p>
+    <ol>
+      <li>Open <code>chrome://extensions/</code></li>
+      <li>Find Meditize.</li>
+      <li>Click <strong>Remove</strong> and confirm.</li>
+    </ol>
+
+    <h2>How to disable the extension (without deleting)</h2>
+    <ol>
+      <li>Open <code>chrome://extensions/</code></li>
+      <li>Find Meditize.</li>
+      <li>Turn off the extension toggle.</li>
+    </ol>
+    <p>You can enable it again anytime.</p>
+
+    <h2>Common issues and quick fixes</h2>
+    <h3>Extension does not appear after install</h3>
+    <ul>
+      <li>Open <code>chrome://extensions/</code> and check if Meditize is enabled.</li>
+      <li>Click the Extensions (puzzle) icon and pin Meditize.</li>
+      <li>Restart Chrome.</li>
+    </ul>
+
+    <h3>Reminders are not showing</h3>
+    <ul>
+      <li>Allow notifications for Chrome in browser and system settings.</li>
+      <li>Check reminder settings inside Meditize.</li>
+      <li>Restart Chrome.</li>
+    </ul>
+
+    <h3>Extension UI does not load</h3>
+    <ul>
+      <li>Refresh the tab.</li>
+      <li>Restart Chrome.</li>
+      <li>Temporarily disable other extensions (possible conflict).</li>
+      <li>Reinstall Meditize.</li>
+    </ul>
+
+    <h2>Privacy</h2>
+    <p>
+      Meditize is built to be lightweight and privacy-conscious. For details, see our
+      <a href="/privacy/">Privacy Policy</a>.
+    </p>
+
+    <h2>Contact support</h2>
+    <p>If you need help, send:</p>
+    <ul>
+      <li>Chrome version</li>
+      <li>OS (Windows / macOS / Linux)</li>
+      <li>Short issue description</li>
+      <li>Screenshot (optional)</li>
+    </ul>
+    <p>
+      For other issues, please <a href="/contacts/">contact us</a>.
+    </p>
+
+    <p class="muted">Last updated: February 2026</p>
+  </section>
+</Base>

@@ -1,0 +1,42 @@
+---
+import { siTiktok, siInstagram, siYoutube, siX } from 'simple-icons';
+
+// Add a URL here and the icon shows up in the footer.
+// Leave it empty and the icon is skipped, so no link ever points nowhere.
+const links = [
+  { name: 'TikTok', url: '', icon: siTiktok.path },
+  { name: 'Instagram', url: '', icon: siInstagram.path },
+  { name: 'LinkedIn', url: '', text: 'in' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@EyeWorkouts', icon: siYoutube.path },
+  { name: 'X', url: 'https://x.com/MeditizeApp', icon: siX.path },
+];
+
+const active = links.filter((l) => l.url);
+---
+
+<div class="socials">
+  {
+    active.map((link) => (
+      <a href={link.url} target="_blank" rel="noopener" title={link.name} aria-label={link.name}>
+        {link.icon ? (
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d={link.icon} />
+          </svg>
+        ) : (
+          <span aria-hidden="true">{link.text}</span>
+        )}
+      </a>
+    ))
+  }
+  <a href="mailto:meditize.app@gmail.com" title="Email" aria-label="Email">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 6.5h18v11H3zM3 7l9 6.5L21 7"></path>
+    </svg>
+  </a>
+</div>

@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+
+const features = [
+  {
+    icon: '👁',
+    title: 'Vision Care',
+    tagline: 'Protect your eyes while you work.',
+    text: 'AI-guided micro-breaks and structured eye exercises reduce strain, improve focus, and keep your vision sharp through long hours at the screen.',
+  },
+  {
+    icon: '🧍',
+    title: 'Posture Support',
+    tagline: 'Stay aligned, prevent fatigue.',
+    text: 'Real-time posture nudges and stretch reminders help you avoid back pain, improve spine health, and boost daily energy levels.',
+  },
+  {
+    icon: '🌿',
+    title: 'Stress & Focus',
+    tagline: 'Reduce burnout, stay balanced.',
+    text: 'Mindful breathing cues and guided stress-relief practices help you remain calm, focused, and energized throughout the day.',
+  },
+  {
+    icon: '🤖',
+    title: 'AI Health Companion',
+    tagline: 'Personalized wellness, built in.',
+    text: 'Meditize adapts to your work patterns with an AI assistant that suggests timely breaks, tracks your progress, and guides you toward healthier routines.',
+  },
+  {
+    icon: '👥',
+    title: 'Team Wellbeing (coming soon)',
+    tagline: 'Wellness at scale.',
+    text: 'Enable managers and HR to support healthier teams with aggregated insights, stress trend tracking, and proactive wellbeing initiatives.',
+  },
+];
+---
+
+<Base
+  title="Features — Meditize"
+  description="Vision care, posture support, stress and focus tools, and an AI health companion for long screen days."
+>
+  <section class="page-hero wrap" slot="hero">
+    <h1>Everything your workday needs</h1>
+    <p>Five ways Meditize keeps your eyes, body and focus in good shape.</p>
+  </section>
+
+  <section class="section wrap">
+    <div class="grid grid--2">
+      {
+        features.map((f) => (
+          <article class="card">
+            <div class="card__icon">{f.icon}</div>
+            <h3>{f.title}</h3>
+            <p><strong>{f.tagline}</strong></p>
+            <p class="muted">{f.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Base>
